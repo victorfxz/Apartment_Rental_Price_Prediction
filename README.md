@@ -84,9 +84,8 @@ The project has been structured with the following folders and files:
 
 --------------------------------------------------
 
-### Project Structure
-Execução do Projeto
-Configuração do Ambiente
+### Execução do Projeto
+#### Configuração do Ambiente
 Clone o repositório:
 
 ```bash
@@ -102,7 +101,7 @@ conda activate previsao-aluguel
 pip install -r requirements.txt
 ```
 
-Exploração e Pré-processamento de Dados
+#### Exploração e Pré-processamento de Dados
 Inicie o Jupyter Notebook:
 
 ```bash
@@ -110,19 +109,21 @@ jupyter notebook
 ```
 
 Execute os notebooks de exploração e pré-processamento de dados:
+
 *data_exploration.ipynb:* Exploração inicial dos dados.
 *data_preprocessing.ipynb:* Limpeza e preparação dos dados para modelagem.
 
-Engenharia de Recursos
+#### Engenharia de Recursos
+
 Execute o notebook de engenharia de recursos:
 *feature_engineering.ipynb:* Criação e transformação de características para melhorar o desempenho do modelo.
 
-Construção e Avaliação do Modelo
+#### Construção e Avaliação do Modelo
 Execute os notebooks de construção e avaliação de modelos:
 *model_building.ipynb:* Desenvolvimento e treinamento de modelos de machine learning.
 *model_evaluation.ipynb:* Avaliação dos modelos e seleção do melhor desempenho.
 
-Deploy do Modelo
+#### Deploy do Modelo
 Inicie o servidor Flask para deploy do modelo:
 
 ```bash
@@ -132,14 +133,15 @@ python app.py
 Faça as previsões usando a API:
 
 Utilize a rota /predict para enviar dados e obter previsões de aluguel.
-Rastreamento de Experimentos com MLflow
+
+#### Rastreamento de Experimentos com MLflow
 Inicie o MLflow para rastreamento de experimentos:
 
 ```bash
 mlflow ui --backend-store-uri sqlite:///mlflow.db
 ```
 
-Monitoramento com Grafana
+#### Monitoramento com Grafana
 Configure e inicie o Grafana para monitoramento:
 Siga as instruções no arquivo monitoring_setup.md para configurar o Grafana.
 
@@ -155,7 +157,7 @@ Siga as instruções no arquivo monitoring_setup.md para configurar o Grafana.
 
 --------------------------------------------------
 
-###Considerações e Conclusão
+### Considerações e Conclusão
 Este projeto oferece uma solução abrangente para o problema de prever preços de aluguel de apartamentos em São Paulo. Ao seguir uma abordagem estruturada de exploração de dados, engenharia de recursos, construção e avaliação de modelos, conseguimos desenvolver um modelo preditivo robusto. Esta solução pode ser extremamente útil para diversas partes interessadas no mercado imobiliário, auxiliando na tomada de decisões informadas sobre preços de aluguel.
 
 Para mais informações e detalhes sobre a implementação, consulte os notebooks e arquivos de código incluídos no repositório. Esperamos que este projeto sirva como uma ferramenta valiosa para prever preços de aluguel e melhorar a eficiência do mercado imobiliário.
