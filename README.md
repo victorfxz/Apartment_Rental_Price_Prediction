@@ -142,7 +142,6 @@ mlflow ui --backend-store-uri sqlite:///mlflow.db
 Monitoramento com Grafana
 Configure e inicie o Grafana para monitoramento:
 Siga as instruções no arquivo monitoring_setup.md para configurar o Grafana.
-- requirements.txt: project requirements
 
 --------------------------------------------------
 
