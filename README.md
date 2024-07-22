@@ -1,14 +1,13 @@
 # Apartment Rental Price Prediction for Sao Paulo - Brazil
-
 <p align="center"><img src="https://camo.githubusercontent.com/2395b9addd283caae164beb046a4c22d0bcf28c6b2a56eca306248eb3ab52164/68747470733a2f2f6d7277616c6c70617065722e636f6d2f696d616765732f68642f73616f2d7061756c6f2d6272617a696c2d706f6e74652d6573746169616469612d6272696467652d717732366c35323839393537776165362e6a7067" width="550"></p>
 
 ## Visão Geral do Projeto
-<p align="justify">Este projeto final para o curso de MLOps Zoomcamp visa prever os preços de aluguel de apartamentos na cidade de São Paulo, Brasil, utilizando um conjunto de dados que contém informações de aproximadamente 13.000 apartamentos. O objetivo é desenvolver um modelo de machine learning que possa ajudar potenciais inquilinos, proprietários e investidores a tomar decisões informadas sobre os preços de aluguel da grande cidade de São Paulo.</p>
+<p align="justify">Este projeto final do curso de MLOps Zoomcamp tem como objetivo prever os preços de aluguel de apartamentos em São Paulo, Brasil, utilizando um conjunto de dados com informações sobre aproximadamente 13.000 apartamentos desta grande cidade. Dessa forma, buscou-se desenvolver um modelo de machine learning para facilitar a tomada de decisões de potenciais inquilinos, possibilidade de futura compra e até mesmo investidores ou instalação de pequenas empresas, ajudando-os a entender e avaliar melhor os preços de aluguel nessa grande metrópole, que possui diversos bairros e prédios. Assim, espero que este projeto possa contribuir, por exemplo, para uma escolha imobiliária mais transparente e acessível, culminando em decisões embasadas nos dados para ver se realmente vale a pena morar no prédio escolhido.</p>
 
-#### ✅ Dataset utilizado disponível em: https://www.kaggle.com/datasets/argonalyst/sao-paulo-real-estate-sale-rent-april-2019
+> ✅ Dataset utilizado disponível em: https://www.kaggle.com/datasets/argonalyst/sao-paulo-real-estate-sale-rent-april-2019
 
 ## Descrição do Problema
-<p align="justify">Os preços de aluguel são influenciados por vários fatores, incluindo localização, tamanho, número de quartos e outras características dos imóveis. Algo que é impusionado por ser a maior cidade do Brasil, o que, consequentemente, eleva os custos e qualidade de vida, ou seja, dependendo do bairro e do prédio, os valores se alteram consideravelmente. Assim, este projeto aborda a necessidade de um modelo preditivo preciso que possa estimar os preços de aluguel com base nesses fatores para uma tomada de decisão de alugar um apartamento, seja para moradia ou para instalação de um pequeno negócio, considerando os valores e caracteristicas do apartamento.</p>
+<p align="justify">Os preços de aluguel qualquer tipo de apartamento são influenciados por vários fatores para chegar em um valor aceitável para o dono, tal como localização, tamanho/área construída, número de quartos e outras características dos imóveis. Como São Paulo (Brasil) é a maior cidade do Brasil, com muitos negócios e empresas de qualquer porte e seguimento instaladas, esses fatores acabam se potencializando, elevando os custos de vida e a qualidade de vida de maneira significativa. Desta maneira, dependendo do bairro e do prédio, os valores podem apresentar mudanças consideráveis, transformando a decisão de alugar um apartamento desafiadora, devido a necessidade de equilibrar a necessidade, dinheiro disponível e finalidade dessa locação. Neste cenário, este projeto buscou desenvolver um modelo de machine learning que possa prever, de modo mais preciso, os preços de aluguel de apartamentos para ajudar interessados a encontrar moradias acessíveis e/ou adequadas às suas necessidades.</p>
 
 ## Tecnologias e ferramentas utilizadas
 ### Principais tecnologias
@@ -33,102 +32,67 @@
 
 
 ## Conjunto de Dados
-<p align="justify">O conjunto de dados utilizado neste projeto inclui informações de apartamentos para alugar na grande cidade de São Paulo - Brasil, disponiblizado em abril de 2019. As principais características do conjunto de dados incluem: </p>
+<p align="justify">O <a href="https://www.kaggle.com/datasets/argonalyst/sao-paulo-real-estate-sale-rent-april-2019">conjunto de dados</a> utilizado neste projeto inclui informações de apartamentos para alugar na grande cidade de São Paulo - Brasil, disponiblizado em abril de 2019. As principais características do conjunto de dados incluem: </p>
 
 - **Latitude e Longitude:** Coordenadas geográficas do apartamento  
 - **Número de Quartos:** Quantidade de quartos no apartamento  
-- **Área Construída:** Tamanho do apartamento em metros quadrados  
-- **Preço de Aluguel:** Valor do aluguel em reais brasileiros **[🎯 alvo da previsão ]**
+- **Área Construída:** Tamanho do apartamento em metros quadrados (m²)  
+- **Preço de Aluguel:** Valor do aluguel em reais brasileiros (R$) **[🎯 alvo da previsão ]**
 
-## Estrutura do Projeto
-The project has been structured with the following folders and files:
-
-- .github: contains the CI/CD files (GitHub Actions)
-- data: dataset and test sample for testing the model
-- integration_tests: prediction integration test with docker-compose
-- lambda: test of the lambda handler with and w/o docker
-- model: full pipeline from preprocessing to prediction and monitoring using MLflow, Prefect, Grafana, Adminer, and docker-compose
-- notebooks: EDA and Modeling performed at the beginning of the project to establish a baseline
-- tests: unit tests
-- makefile: set of execution tasks
-- pyproject.toml: linting and formatting
-- setup.py: project installation module
-- requirements.txt: project requirements
-
-## Execução do Projeto
-#### Configuração do Ambiente
+## Execução do Projeto [Localmente]
+### Configuração do Ambiente
 Clone o repositório:
 
 ```bash
-git clone https://github.com/seuusuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/victorfxz/Apartment_Rental_Price_Prediction/
+cd Apartment_Rental_Price_Prediction
 ```
 
-Crie um ambiente virtual e instale as dependências:
+Crie e ative o ambiente virtual:
+> OBS.: Para isso será utilizado o Ambiente Anaconda [ <a href="https://www.anaconda.com/download/success"><img src="https://github.com/user-attachments/assets/62bb7b30-50ed-4a7c-a427-05718f023c62" width="15"></a> ]
 
 ```bash
-conda create -n previsao-aluguel python=3.9
+conda create -n previsao-aluguel python=3.10
 conda activate previsao-aluguel
+```
+> Caso não tenha o pip:
+> ```bash
+> conda install pip
+
+Instale todas as dependências:
+
+```bash
 pip install -r requirements.txt
 ```
 
-#### Exploração e Pré-processamento de Dados
-Inicie o Jupyter Notebook:
+### Exploração e Pré-processamento de Dados
+Inicie o notebook `model_to_predict_apartment_rental_prices_SP-BR` com o Jupyter Notebook:
 
 ```bash
 jupyter notebook
 ```
 
-Execute os notebooks de exploração e pré-processamento de dados:
-
-*data_exploration.ipynb:* Exploração inicial dos dados.
-*data_preprocessing.ipynb:* Limpeza e preparação dos dados para modelagem.
-
-#### Engenharia de Recursos
-
-Execute o notebook de engenharia de recursos:
-*feature_engineering.ipynb:* Criação e transformação de características para melhorar o desempenho do modelo.
-
-#### Construção e Avaliação do Modelo
-Execute os notebooks de construção e avaliação de modelos:
-*model_building.ipynb:* Desenvolvimento e treinamento de modelos de machine learning.
-*model_evaluation.ipynb:* Avaliação dos modelos e seleção do melhor desempenho.
-
-#### Deploy do Modelo
+### Deploy do Modelo
 Inicie o servidor Flask para deploy do modelo:
 
 ```bash
 python app.py
 ```
 
-Faça as previsões usando a API:
-
-Utilize a rota /predict para enviar dados e obter previsões de aluguel.
-
-#### Rastreamento de Experimentos com MLflow
+### Rastreamento de Experimentos com MLflow
 Inicie o MLflow para rastreamento de experimentos:
 
 ```bash
 mlflow ui --backend-store-uri sqlite:///mlflow.db
 ```
 
-#### Monitoramento com Grafana
+### Monitoramento com Grafana
+> Caso não tenha o Grafana instalado [ <a href="https://grafana.com/grafana/download?platform=windows"><img src="https://github.com/user-attachments/assets/62bb7b30-50ed-4a7c-a427-05718f023c62" width="15"></a> ]
+
 Configure e inicie o Grafana para monitoramento:
 Siga as instruções no arquivo monitoring_setup.md para configurar o Grafana.
 
---------------------------------------------------
-
-### Project Best Practices
-- ✅ Problem description: The project is well described and it's clear and understandable.
-- ✅ Experiment tracking and model registry: Both experiment tracking and model registry are used.
-- ✅ Workflow orchestration: Fully deployed workflow.
-- ✅ Model deployment: The model deployment code is containerized and can be deployed to the cloud.
-- ✅ Model monitoring: Basic model monitoring that calculates and reports metrics.
-- ✅ Reproducibility: Instructions are clear, it's easy to run the code, and it works. The versions for all the dependencies are specified.
-
---------------------------------------------------
-
-### Considerações e Conclusão
+## Considerações e Conclusão
 Este projeto oferece uma solução abrangente para o problema de prever preços de aluguel de apartamentos em São Paulo. Ao seguir uma abordagem estruturada de exploração de dados, engenharia de recursos, construção e avaliação de modelos, conseguimos desenvolver um modelo preditivo robusto. Esta solução pode ser extremamente útil para diversas partes interessadas no mercado imobiliário, auxiliando na tomada de decisões informadas sobre preços de aluguel.
 
 Para mais informações e detalhes sobre a implementação, consulte os notebooks e arquivos de código incluídos no repositório. Esperamos que este projeto sirva como uma ferramenta valiosa para prever preços de aluguel e melhorar a eficiência do mercado imobiliário.
