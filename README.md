@@ -1,73 +1,46 @@
 # Apartment Rental Price Prediction for Sao Paulo - Brazil
 
-![image](https://github.com/user-attachments/assets/08dfcef6-d72e-4d09-b00b-35237371d6db)
+<p align="center"><img src="https://camo.githubusercontent.com/2395b9addd283caae164beb046a4c22d0bcf28c6b2a56eca306248eb3ab52164/68747470733a2f2f6d7277616c6c70617065722e636f6d2f696d616765732f68642f73616f2d7061756c6f2d6272617a696c2d706f6e74652d6573746169616469612d6272696467652d717732366c35323839393537776165362e6a7067" width="550"></p>
 
-This project has been developed as part of the MLOps Zoomcamp course provided by DataTalks.Club.
-Below you can find some instructions to understand the project content.
+## Visão Geral do Projeto
+<p align="justify">Este projeto final para o curso de MLOps Zoomcamp visa prever os preços de aluguel de apartamentos na cidade de São Paulo, Brasil, utilizando um conjunto de dados que contém informações de aproximadamente 13.000 apartamentos. O objetivo é desenvolver um modelo de machine learning que possa ajudar potenciais inquilinos, proprietários e investidores a tomar decisões informadas sobre os preços de aluguel da grande cidade de São Paulo.</p>
 
---------------------------------------------------
+#### ✅ Dataset utilizado disponível em: https://www.kaggle.com/datasets/argonalyst/sao-paulo-real-estate-sale-rent-april-2019
 
-### Visão Geral do Projeto
-Este projeto visa prever os preços de aluguel de apartamentos na cidade de São Paulo, Brasil, utilizando um conjunto de dados que contém informações de aproximadamente 13.000 apartamentos. O objetivo é desenvolver um modelo de machine learning que possa ajudar potenciais inquilinos, proprietários e investidores a tomar decisões informadas sobre os preços de aluguel.
+## Descrição do Problema
+<p align="justify">Os preços de aluguel são influenciados por vários fatores, incluindo localização, tamanho, número de quartos e outras características dos imóveis. Algo que é impusionado por ser a maior cidade do Brasil, o que, consequentemente, eleva os custos e qualidade de vida, ou seja, dependendo do bairro e do prédio, os valores se alteram consideravelmente. Assim, este projeto aborda a necessidade de um modelo preditivo preciso que possa estimar os preços de aluguel com base nesses fatores para uma tomada de decisão de alugar um apartamento, seja para moradia ou para instalação de um pequeno negócio, considerando os valores e caracteristicas do apartamento.</p>
 
-### Project Description
-No mercado imobiliário, prever com precisão os preços de aluguel é crucial para diversas partes interessadas. Os preços de aluguel são influenciados por vários fatores, incluindo localização, tamanho, número de quartos e outras características dos imóveis. Este projeto aborda a necessidade de um modelo preditivo preciso que possa estimar os preços de aluguel com base nesses fatores.
+## Tecnologias e ferramentas utilizadas
+### Principais tecnologias
+ㅤ<img src="https://github.com/user-attachments/assets/d19d6bf8-7500-47c7-92bf-c3f46229099a" width="13">ㅤ**Vercel** - Utilizado como plataforma de hospedagem e implantação de aplicativos web baseada em nuvem  
+ㅤ<img src="https://github.com/user-attachments/assets/818cc442-56fd-4400-874d-a1d0a791cfbb" width="13">ㅤ**MLflow** - Utilizado para rastreamento do experimento e registro do modelo de previsão  
+ㅤ<img src="https://cdn.worldvectorlogo.com/logos/prefect-1.svg" width="13">ㅤ**Prefect** - Utilizado para orquestração do fluxo de trabalho  
+ㅤ<img src="https://github.com/user-attachments/assets/8f674d6d-62f0-4e7d-a5b1-922d72911d53" width="13">ㅤ**Flask** - Utilizado para implantação do modelo (web service)  
+ㅤ<img src="https://github.com/user-attachments/assets/ec87d23a-028b-43f1-b739-8195e256c817" width="13">ㅤ**Docker** - Utilizado para containerização do aplicativo    
+ㅤ<img src="https://github.com/user-attachments/assets/d48aa56b-bce1-404d-9b72-25632905c001" width="13">ㅤ**Anaconda** - Utilizado para gerenciar os pacotes e criar o ambiente virtual  
+ㅤ<img src="https://github.com/user-attachments/assets/27fb21a1-33bb-478e-b755-e33bec6c3bbf" width="13">ㅤ**Grafana** - Utilizado para monitoramento do desempenho do modelo de previsão  
 
-### Objetivos do Projeto
-*Exploração e Pré-processamento de Dados:* Entender o conjunto de dados, lidar com valores ausentes e preparar os dados para a modelagem.
-*Engenharia de Recursos:* Extrair características significativas e criar novas que possam melhorar o desempenho do modelo.
-*Construção do Modelo:* Desenvolver e treinar vários modelos de machine learning para prever os preços de aluguel.
-*Avaliação do Modelo:* Avaliar os modelos utilizando métricas apropriadas e selecionar o que tiver melhor desempenho.
-*Predição:* Utilizar o modelo selecionado para fazer previsões em dados não vistos.
+### Bibliotecas utilizadas
+ㅤ<img src="https://github.com/user-attachments/assets/9dd16004-ce95-4961-8e5a-fe22369784be" width="14">ㅤ**Pandas** - Utilizada para manipulação e análise dos dados  
+ㅤ<img src="https://github.com/user-attachments/assets/97bba754-6e20-4fc9-ac8d-b8c919555837" alt="PybSklearn" width="13">ㅤ**Scikit-learn** - Utilizada para construir, treinar e avaliar o modelo de previsão  
+ㅤ<img src="https://github.com/user-attachments/assets/acdeb0d6-3baf-4dda-a06d-d518e0d9a2b0" alt="PybMathplot" width="13">ㅤ**Matplotlib** - Utiliazada para a visualização dos dados  
 
-*Git*: Version control.
-*Visual Studio Code:* Development environment.
-*Jupyter Notebook:* Data exploration and visualization.
-*PostgreSQL:* Data storage.
-*Python:* Main programming language.
-*Pandas:* Data manipulation and analysis.
-*Matplotlib:* Data visualization.
-*Scikit-learn:* Machine learning modeling.
-*Flask:* Model deployment.
-*MLflow:* Experiment tracking.
-*Docker:* Application containerization.
-*Anaconda:* Package and environment management.
-*Grafana:* Monitoring.
+### Outras ferramentas utilizadas para o desenvolvimento
+ㅤ<img src="https://github.com/user-attachments/assets/ec1b86c6-492f-4345-ad16-6dc138b990c3" width="13">ㅤ**Git** - Utilizado para realizar o controle da versão  
+ㅤ<img src="https://github.com/user-attachments/assets/704b646c-58ae-426d-8f1c-e7c2c7fc964b" width="13">ㅤ**Visual Studio Code** - Utilizado para efetuar o depuramento e gerenciamento do código Python e os demais arquivos  
+ㅤ<img src="https://github.com/user-attachments/assets/d3eee82b-8a6b-4789-8182-d4d6816f0273" width="13">ㅤ**Jupyter Notebook** - Utilizado para realizar a exploração e visualização dos dados  
+ㅤ<img src="https://github.com/user-attachments/assets/52316734-849b-4f46-8bf8-6a7f839405af" width="13">ㅤ**PostgreSQL** - Utilizado como gerenciamento de banco de dados relacional  
 
---------------------------------------------------
-### Conjunto de Dados
-O conjunto de dados utilizado neste projeto inclui informações de apartamentos para venda e aluguel na cidade de São Paulo, anunciados em abril de 2019. As principais características do conjunto de dados incluem:
 
-*Latitude e Longitude:* Coordenadas geográficas do apartamento.
-*Número de Quartos:* Quantidade de quartos no apartamento.
-*Área Construída:* Tamanho do apartamento em metros quadrados.
-*Preço de Aluguel:* Valor do aluguel (alvo da previsão). 
+## Conjunto de Dados
+<p align="justify">O conjunto de dados utilizado neste projeto inclui informações de apartamentos para alugar na grande cidade de São Paulo - Brasil, disponiblizado em abril de 2019. As principais características do conjunto de dados incluem: </p>
 
-### Tech Stack
+- **Latitude e Longitude:** Coordenadas geográficas do apartamento  
+- **Número de Quartos:** Quantidade de quartos no apartamento  
+- **Área Construída:** Tamanho do apartamento em metros quadrados  
+- **Preço de Aluguel:** Valor do aluguel em reais brasileiros **[🎯 alvo da previsão ]**
 
-<div style="display: inline_block"><br>
-  <img align="center" src="https://camo.githubusercontent.com/3d768e26ac10ba994a60ed19acd487895cc43a9cdd43e9305c2408b93136234d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769742d2532334630353033332e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d676974266c6f676f436f6c6f723d7768697465">
-  <img align="center" src="https://camo.githubusercontent.com/998382ebc9a32162128b00b597ea488192df024fd015e5edec001fe29fcb93a6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f56697375616c25323053747564696f253230436f64652d3030373864372e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d76697375616c2d73747564696f2d636f6465266c6f676f436f6c6f723d7768697465">
-    <img align="center" src="https://camo.githubusercontent.com/0562f16a4ae7e35dae6087bf8b7805fb7e664a9e7e20ae6d163d94e56b94f32d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f707974686f6e2d3336373041303f7374796c653d666f722d7468652d6261646765266c6f676f3d707974686f6e266c6f676f436f6c6f723d666664643534">
-    <img align="center" src="https://camo.githubusercontent.com/ca8ee16f3ff90cf3349be99b021b0b2a366cd71499ef20bcdc2b43dbc2668483/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f416e61636f6e64612d2532333434413833332e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d616e61636f6e6461266c6f676f436f6c6f723d7768697465">
-    <img align="center" src="https://camo.githubusercontent.com/c044ae9d0419850e7f2385c22ea5de56e101e6a616789bd35d2d8fa137a63642/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6a7570797465722d2532334641304630302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6a757079746572266c6f676f436f6c6f723d7768697465">
-     <img align="center" src="https://camo.githubusercontent.com/05cab52d05663cecbe47a23ca71075ba81b9080dd50561d0f76eb46e902cfef8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f70616e6461732d2532333135303435382e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d70616e646173266c6f676f436f6c6f723d7768697465">
-     <img align="center" src="https://camo.githubusercontent.com/edd8c9123ff9093143508af0b218cffc132f16a014be2d2147894458c351dc23/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6174706c6f746c69622d2532336439656164332e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d4d6174706c6f746c6962266c6f676f436f6c6f723d626c61636b">
-     <img align="center" src="https://camo.githubusercontent.com/6854ba9612c2cb025e7c65445787d93f6436d4691303601506e0bc28be2ae9b8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f506f737467726553514c2d3331363139323f7374796c653d666f722d7468652d6261646765266c6f676f3d706f737467726573716c266c6f676f436f6c6f723d7768697465">
-     <img align="center" src="https://camo.githubusercontent.com/d7eb681a1d19819ff9caeee4e3b0b1748da0b97af47e2084ca3d5e8302aec8a9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7363696b69742d2d6c6561726e2d2532334637393331452e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d7363696b69742d6c6561726e266c6f676f436f6c6f723d7768697465">
-     <img align="center" src="https://camo.githubusercontent.com/40b50389027e826f74eb106c67530673ffc46486250581ca5845fc7284f7c717/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d4c666c6f772d3031393445322e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d4d4c666c6f77266c6f676f436f6c6f723d7768697465">
-      <img align="center" src="https://camo.githubusercontent.com/9ed458fea6ba5324c019bbc32f837fbceaca74f3862454a77d7e94150b97fc48/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f666c61736b2d2532333030302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d666c61736b266c6f676f436f6c6f723d7768697465">
-      <img align="center" src="https://camo.githubusercontent.com/8396abd667a0eca7d28cdb29ec63b6bf29a7854c7c3d467e6ece648c7e9b81e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f646f636b65722d2532333064623765642e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d646f636b6572266c6f676f436f6c6f723d7768697465">
-      <img align="center" src="https://camo.githubusercontent.com/a00920b123df05b3df5e368e509f18bacd65bc5909698fb42be5f35063550f47/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f747970657363726970742d2532333030374143432e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d74797065736372697074266c6f676f436f6c6f723d7768697465">
-      <img align="center" src="https://camo.githubusercontent.com/65f3aaa6432363f0979f3e35bc4783d5b39753d50d200e0c149fc5c78e1eeb49/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6578742e6a732d626c75653f7374796c653d666f722d7468652d6261646765266c6f676f3d4e6578742e6a73266c6f676f436f6c6f723d7768697465253232">
-       <img align="center" src="https://camo.githubusercontent.com/bfe42a01bfb74a48dabc254065e874f313ca2aedd9bde944cb8bb4f9cef69dd4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6e6f64652e6a732d3033363834663f7374796c653d666f722d7468652d6261646765266c6f676f3d6e6f64652e6a73266c6f676f436f6c6f723d7768697465"> 
-      <img align="center" src="https://camo.githubusercontent.com/509859c3a417eb3ea794450d88303bdaced996cba60811e552e5a89bf89ff584/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f67726166616e612d2532334634363830302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d67726166616e61266c6f676f436f6c6f723d7768697465">
-      <img align="center" src="https://camo.githubusercontent.com/b9ff564d8c311812747f1aacea54cf703d850756f9179f9eff6899da20a701a2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f76657263656c2d2532333030303030302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d76657263656c266c6f676f436f6c6f723d7768697465">
-      </div>
-
---------------------------------------------------
-
-### Project Structure
+## Estrutura do Projeto
 The project has been structured with the following folders and files:
 
 - .github: contains the CI/CD files (GitHub Actions)
@@ -82,9 +55,7 @@ The project has been structured with the following folders and files:
 - setup.py: project installation module
 - requirements.txt: project requirements
 
---------------------------------------------------
-
-### Execução do Projeto
+## Execução do Projeto
 #### Configuração do Ambiente
 Clone o repositório:
 
